@@ -1,0 +1,10 @@
+<form novalidate [formGroup]="form">
+  <div class="form-group">
+    <label for="nome">Nome do Curso</label>
+    <input type="text" id="nome" placeholder="Nome do Curso" formControlName="nome" />
+  </div>
+  <div style="margin: 20px;">
+    <button type="submit" (click)="onSubmit()">Salvar</button>
+    <button type="button" (click)="onCancel()">Cancelar</button>
+  </div>
+</form>

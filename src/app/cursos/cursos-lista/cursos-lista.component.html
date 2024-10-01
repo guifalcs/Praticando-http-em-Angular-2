@@ -1,0 +1,36 @@
+<div class="card mt-3">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Curso</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let curso of cursos">
+          <td>{{ curso.id }}</td>
+          <td>{{ curso.nome }}</td>
+          <td>
+            <span>
+              <button (click)="onEdit(curso.id)">
+                Atualizar
+              </button>
+
+              <button>
+                Remover
+              </button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button [routerLink]="['/cursos/novo']">Novo curso</button>
+
+    <ng-template #loading>
+      <span>Carregando Cursos...</span>
+    </ng-template>
