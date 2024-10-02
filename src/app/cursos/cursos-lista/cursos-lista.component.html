@@ -1,6 +1,5 @@
 <div class="card mt-3">
-  <div class="card-header">
-  </div>
+  <div class="card-header"></div>
   <div class="card-body">
     <table class="table table-hover">
       <thead>
@@ -16,13 +15,9 @@
           <td>{{ curso.nome }}</td>
           <td>
             <span>
-              <button (click)="onEdit(curso.id)">
-                Atualizar
-              </button>
+              <button>Atualizar</button>
 
-              <button>
-                Remover
-              </button>
+              <button>Remover</button>
             </span>
           </td>
         </tr>
@@ -34,3 +29,5 @@
     <ng-template #loading>
       <span>Carregando Cursos...</span>
     </ng-template>
+  </div>
+</div>

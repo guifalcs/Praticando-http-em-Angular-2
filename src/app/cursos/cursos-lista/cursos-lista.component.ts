@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CursosService } from '../cursos.service';
 import { Curso } from '../curso';
 import { Observable, Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cursos-lista',
@@ -16,7 +17,7 @@ export class CursosListaComponent implements OnInit, OnDestroy {
 
   cursos$: Observable<Curso[]>
 
-  constructor(private service: CursosService) {}
+  constructor(private service: CursosService, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.sub = this.service.list().subscribe(dados => this.cursos = dados)
